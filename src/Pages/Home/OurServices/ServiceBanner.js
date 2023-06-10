@@ -3,7 +3,7 @@ import treatment from '../../../assets/images/treatment.png'
 
 const ServiceBanner = () => {
     return (
-        <section>
+        <section className='mt-16'>
             <div className="hero">
                 <div className="hero-content flex-col lg:flex-row">
                     <img src={treatment} alt='' className="w-full lg:w-1/2  rounded-lg shadow-2xl" />
