@@ -8,7 +8,7 @@ const TestimonialCard = ({testimonial}) => {
                 <div className="card-body items-center text-center">
                     <p>{comment}</p>
                     <div className="card-actions justify-end items-center mt-5">
-                       <img src={img} alt="" className='border-4 border-secondary rounded-full'/>
+                       <img src={img} alt="" className='w-20 border-4 border-secondary rounded-full'/>
                        <div>
                           <h4 className='font-semibold'>{name}</h4>
                           <p>{lives}</p>
