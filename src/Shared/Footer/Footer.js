@@ -1,9 +1,15 @@
 import React from 'react';
+import footer from '../../assets/images/footer.png'
 
 const Footer = () => {
     return (
         <section className=''>
-            <footer className="footer p-10 bg-neutral max-w-screen-xl text-neutral-content">
+            <footer className="footer p-10 bg-neutral  text-neutral-content"
+            style={{
+                background: `url(${footer})`,
+                backgroundSize: 'cover'
+            }}
+            >
                 <div>
                     <span className="footer-title">Services</span>
                     <a href='jf' className="link link-hover">Branding</a>
@@ -25,7 +31,7 @@ const Footer = () => {
                     <a href='jf' className="link link-hover">Cookie policy</a>
                 </div>
             </footer>
-            <footer className="footer footer-center p-4 bg-base-300 text-base-content">
+            <footer className="footer footer-center p-4  text-base-content">
                     <div>
                         <p>Copyright © 2023 - All right reserved by ACME Industries Ltd</p>
                     </div>

@@ -19,23 +19,23 @@ const Banner = () => {
                 </div>
             </div>
             <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-10 lg:absolute bottom-0'>
-                <div className='flex bg-gradient-to-r from-primary to-secondary p-8 rounded-lg'>
+                <div className='flex flex-col items-center lg:flex-row bg-gradient-to-r from-primary to-secondary p-8 rounded-lg'>
                     <FaClock className='text-6xl '></FaClock>
-                    <div className='ml-3'>
+                    <div className='ml-3 flex flex-col items-center'>
                         <h4 className='text-2xl font-semibold'>Opening Hours</h4>
                         <p>Open 9.00 am to 10.00 pm everyday</p>
                     </div>
                 </div>
-                <div className='flex bg-accent p-8 rounded-lg'>
+                <div className='flex flex-col items-center lg:flex-row bg-accent p-8 rounded-lg'>
                     <FaMapMarkerAlt className='text-6xl'></FaMapMarkerAlt>
-                    <div className='ml-3'>
+                    <div className='ml-3 flex flex-col items-center'>
                         <h4 className='text-2xl font-semibold'>Visit our location</h4>
                         <p>Brooklyn, NY 10036, United States</p>
                     </div>
                 </div>
-                <div className='flex bg-gradient-to-r from-primary to-secondary p-8 rounded-lg'>
+                <div className='flex flex-col items-center lg:flex-row bg-gradient-to-r from-primary to-secondary p-8 rounded-lg'>
                     <FaPhone className='text-6xl'></FaPhone>
-                    <div className='ml-3'>
+                    <div className='ml-3 flex flex-col items-center'>
                         <h4 className='text-2xl font-semibold'>Contact us now</h4>
                         <p>+00 12345355</p>
                     </div>
