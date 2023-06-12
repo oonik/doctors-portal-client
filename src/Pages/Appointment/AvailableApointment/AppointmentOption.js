@@ -1,7 +1,7 @@
 import React from 'react';
 
-const AppointmentOption = ({ appointmentOption }) => {
-    const { name, slots, _id } = appointmentOption;
+const AppointmentOption = ({ appointmentOption, setTreatment }) => {
+    const { name, slots } = appointmentOption;
     return (
         
             <div className="card text-neutral-content shadow-xl">
@@ -10,8 +10,7 @@ const AppointmentOption = ({ appointmentOption }) => {
                     <p>{slots.length > 0 ? slots[0] : 'Try another day'}</p>
                     <p>{slots.length} {slots.length > 1 ? 'spaces':'space'} available</p>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-secondary text-white">Book Appointment</button>
-                        <button className="btn" onClick={()=>window.booking_modal.showModal()}>open modal</button>
+                        <button disabled={slots.length === 0} className="btn btn-secondary text-white" onClick={()=>window.booking_modal.showModal(setTreatment(appointmentOption))}>Booking appointment</button>
                     </div>
                 </div>
             </div>
