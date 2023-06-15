@@ -5,7 +5,7 @@ import BookingModal from '../BookingModal/BookingModal';
 
 const AvailableApointment = ({ selectedDate }) => {
     const [appointmentOptions, setAppointmentOption] = useState([]);
-    const [treatMent, setTreatment] = useState({});
+    const [treatMent, setTreatment] = useState();
 
     useEffect(() => {
         fetch('appointmentOptions.json')
@@ -29,6 +29,7 @@ const AvailableApointment = ({ selectedDate }) => {
                 <BookingModal
                     treatMent={treatMent}
                     selectedDate={selectedDate}
+                    setTreatment={setTreatment}
                 ></BookingModal>}
         </section>
     );

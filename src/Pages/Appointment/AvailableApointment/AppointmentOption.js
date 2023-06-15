@@ -10,7 +10,11 @@ const AppointmentOption = ({ appointmentOption, setTreatment }) => {
                     <p>{slots.length > 0 ? slots[0] : 'Try another day'}</p>
                     <p>{slots.length} {slots.length > 1 ? 'spaces':'space'} available</p>
                     <div className="card-actions justify-end">
-                        <button disabled={slots.length === 0} className="btn btn-secondary text-white" onClick={()=>window.booking_modal.showModal(setTreatment(appointmentOption))}>Booking appointment</button>
+                        <button 
+                        disabled={slots.length === 0} 
+                        className="btn btn-secondary text-white" 
+                        onClick={()=>setTreatment(appointmentOption, window.booking_modal?.showModal())}
+                        >Booking appointment</button>
                     </div>
                 </div>
             </div>
