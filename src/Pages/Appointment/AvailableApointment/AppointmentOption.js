@@ -13,7 +13,7 @@ const AppointmentOption = ({ appointmentOption, setTreatment }) => {
                         <button 
                         disabled={slots.length === 0} 
                         className="btn btn-secondary text-white" 
-                        onClick={()=>setTreatment(appointmentOption, window.booking_modal?.showModal())}
+                        onClick={()=>setTreatment(appointmentOption,window.booking_modal?.showModal())}
                         >Booking appointment</button>
                     </div>
                 </div>
