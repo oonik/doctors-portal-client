@@ -1,14 +1,21 @@
 import React from 'react';
-import appointment from '../../../assets/images/appointment.png'
+import appointment from '../../../assets/images/appointment.png';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ContactUs = () => {
+    AOS.init()
     return (
         <section className='mt-36 py-16'
             style={{
                 background: `url(${appointment})`
             }}
         >
-            <div className="hero">
+            <div 
+            data-aos="fade-up"
+            data-aos-easing="ease-out-cubic"
+     data-aos-duration="2000"
+            className="hero">
                 <div className="card flex-shrink-0 w-full max-w-lg">
                     <h4 className='text-center lg:text-2xl font-semibold text-secondary'>contact us </h4>
                     <h3 className='text-center text-2xl lg:text-3xl mt-2.5'>Stay connected with us</h3>

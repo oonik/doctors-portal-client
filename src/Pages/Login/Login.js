@@ -3,6 +3,7 @@ import { useForm } from "react-hook-form";
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useToken from '../../hook/useToken';
 
 const provider = new GoogleAuthProvider()
 
@@ -10,10 +11,16 @@ const Login = () => {
     const { register, formState: { errors }, handleSubmit } = useForm();
     const {loginUser, forgetPassword, loginUserByEmail} = useContext(AuthContext);
     const [loginError, setLoginError] = useState("");
+    const [loginUserEmail, setLoginUserEmail] = useState('');
+    const [token] = useToken(loginUserEmail);
     const navigate = useNavigate();
     const location = useLocation();
 
     const from = location.state?.from?.pathname || '/';
+
+    if(token){
+        navigate(from, {replace:true})
+     }
 
     const handleLogin = data => {
         console.log(data);
@@ -22,7 +29,7 @@ const Login = () => {
         .then(result =>{
             const user = result.user;
             console.log(user)
-            navigate(from, {replace:true})
+            setLoginUserEmail(data.email)
         })
         .catch(err =>{
             console.error(err);
@@ -52,7 +59,8 @@ const Login = () => {
        .catch(error =>{
         console.log(error)
        })
-    }
+    };
+
 
     return (
         <section className='h-[800px] flex justify-center items-center py-10'>

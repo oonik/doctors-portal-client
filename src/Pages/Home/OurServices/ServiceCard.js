@@ -1,9 +1,12 @@
 import React from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const ServiceCard = ({service}) => {
     const {name, img, description} = service;
+    AOS.init()
     return (
-        <div className="card bg-base-100 shadow-xl">
+        <div data-aos="zoom-in" className="card bg-base-100 shadow-xl">
             <figure className="px-10 pt-10">
                 <img src={img} alt="Shoes" className="rounded-xl" />
             </figure>

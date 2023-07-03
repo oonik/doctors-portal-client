@@ -4,7 +4,7 @@ import OurServices from '../OurServices/OurServices';
 import MakeAppointment from './MakeAppointment/MakeAppointment';
 import Testimonial from '../Testimonial/Testimonial';
 import ContactUs from '../ContactUs/ContactUs';
-import Footer from '../../../Shared/Footer/Footer';
+
 
 const Home = () => {
     return (
@@ -14,7 +14,6 @@ const Home = () => {
             <MakeAppointment></MakeAppointment>
             <Testimonial></Testimonial>
             <ContactUs></ContactUs>
-            <Footer></Footer>
         </div>
     );
 };
