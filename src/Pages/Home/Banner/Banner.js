@@ -18,7 +18,7 @@ const Banner = () => {
                     speed={() => 800}
                     easing={(type) => (type === 2 ? 'cubic-bezier(0.36, 0, 0.66, -0.56)' : 'cubic-bezier(0.34, 1.56, 0.64, 1)')}>
                     <PhotoView src={banner}>
-                    <img src={banner} style={{ objectFit: 'cover' }}  alt='' className=" rounded-lg shadow-2xl lg:w-1/2" />
+                    <img src={banner} style={{ objectFit: 'cover' }}  alt='' className=" rounded-lg shadow-2xl lg:w-1/2 " />
                     </PhotoView>
                     </PhotoProvider>
                     <div className='lg:w-1/2'>

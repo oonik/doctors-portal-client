@@ -25,7 +25,7 @@ const AddDoctor = () => {
         console.log(img)
         const formData = new FormData();
         formData.append('image', img);
-        const url = `https://api.imgbb.com/1/upload?expiration=600&key=${imageHostKey}`
+        const url = `https://api.imgbb.com/1/upload?key=${imageHostKey}`
         fetch(url,formData,{
             method: 'POST',
             body: formData
@@ -59,7 +59,7 @@ const AddDoctor = () => {
         return <Loading></Loading>
     }
     return (
-        <div className='w-96 p-7 '>
+        <div className='w-96 p-7 lg:ml-96 mt-10'>
             <h1 className='text-2xl'>Add a new doctor</h1>
             <form onSubmit={handleSubmit(handleAddDoctor)}>
                 <div className="form-control w-full max-w-xs">
